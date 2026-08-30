@@ -1,7 +1,7 @@
-import Button from './ui/Button.jsx'
-import Icon from './ui/Icon.jsx'
-import Reveal from './ui/Reveal.jsx'
-import { Eyebrow } from './ui/Section.jsx'
+import Button from "./ui/Button.jsx";
+import Icon from "./ui/Icon.jsx";
+import Reveal from "./ui/Reveal.jsx";
+import { Eyebrow } from "./ui/Section.jsx";
 
 export default function Contact() {
   return (
@@ -10,12 +10,9 @@ export default function Contact() {
         <Reveal className="grid overflow-hidden border border-line bg-white shadow-card lg:grid-cols-[1.1fr_0.9fr]">
           <div className="px-7 py-10 md:px-14 md:py-16">
             <Eyebrow>Get in touch</Eyebrow>
-            <h2 className="mt-5 text-display-md font-bold text-navy-900">
-              Let&apos;s build something that works.
-            </h2>
+            <h2 className="mt-5 text-display-md font-bold text-navy-900">Let&apos;s build something that works.</h2>
             <p className="mb-9 mt-5 max-w-[440px] text-[16px] leading-relaxed text-muted">
-              Tell us about your business problem and we&apos;ll tell you honestly whether — and how —
-              we can help.
+              Tell us about your business problem and we&apos;ll tell you honestly whether — and how — we can help.
             </p>
             <Button href="mailto:contact@jasdigitaltechnologies.com" variant="navy" icon="mail">
               Email us
@@ -34,8 +31,8 @@ export default function Contact() {
                   Studio Address
                 </div>
                 <p className="text-[15px] font-medium leading-[1.6] text-white">
-                  PL-546, Sector 28, PCNTDA, Nigdi, Pradhikaran, P.C.N.T., Nigdi, Pune City,
-                  Pune – 411044, Maharashtra, India
+                  PL-546, Sector 28, PCNTDA, Nigdi, Pradhikaran, P.C.N.T., Nigdi, Pune City, Pune – 411044, Maharashtra,
+                  India
                 </p>
               </div>
             </div>
@@ -63,5 +60,5 @@ export default function Contact() {
         </Reveal>
       </div>
     </section>
-  )
+  );
 }
