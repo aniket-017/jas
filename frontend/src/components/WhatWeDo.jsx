@@ -1,39 +1,39 @@
-import Icon from './ui/Icon.jsx'
-import Reveal from './ui/Reveal.jsx'
-import { Section, SectionHead } from './ui/Section.jsx'
+import Icon from "./ui/Icon.jsx";
+import Reveal from "./ui/Reveal.jsx";
+import { Section, SectionHead } from "./ui/Section.jsx";
 
 const services = [
   {
-    icon: 'database',
-    title: 'Data Ingestion',
-    description: 'Collecting data from robots, machines, sensors and enterprise systems.',
+    icon: "database",
+    title: "Data Ingestion",
+    description: "Collecting data from robots, machines, sensors and enterprise systems.",
   },
   {
-    icon: 'sliders',
-    title: 'Data Processing',
-    description: 'Cleaning, transforming and validating raw data for accuracy and consistency.',
+    icon: "sliders",
+    title: "Data Processing",
+    description: "Cleaning, transforming and validating raw data for accuracy and consistency.",
   },
   {
-    icon: 'hub',
-    title: 'Data Integration',
-    description: 'Consolidating data from multiple sources into a unified view.',
+    icon: "hub",
+    title: "Data Integration",
+    description: "Consolidating data from multiple sources into a unified view.",
   },
   {
-    icon: 'chart',
-    title: 'Analytics & Insights',
-    description: 'Turning processed data into dashboards and actionable business insights.',
+    icon: "chart",
+    title: "Analytics & Insights",
+    description: "Turning processed data into dashboards and actionable business insights.",
   },
   {
-    icon: 'cloud',
-    title: 'Data Platforms',
-    description: 'Building scalable data pipelines and cloud-native data platforms.',
+    icon: "cloud",
+    title: "Data Platforms",
+    description: "Building scalable data pipelines and cloud-native data platforms.",
   },
   {
-    icon: 'shield',
-    title: 'Data Governance',
-    description: 'Ensuring data quality, security, compliance and traceability.',
+    icon: "shield",
+    title: "Data Governance",
+    description: "Ensuring data quality, security, compliance and traceability.",
   },
-]
+];
 
 export default function WhatWeDo() {
   return (
@@ -62,7 +62,7 @@ export default function WhatWeDo() {
                 <Icon name={service.icon} className="h-[26px] w-[26px]" />
               </span>
               <span className="font-mono text-xs text-muted-light transition-colors duration-300 group-hover:text-brand-500">
-                {String(index + 1).padStart(2, '0')}
+                {String(index + 1).padStart(2, "0")}
               </span>
             </div>
 
@@ -72,5 +72,5 @@ export default function WhatWeDo() {
         ))}
       </div>
     </Section>
-  )
+  );
 }

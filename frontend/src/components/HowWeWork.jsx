@@ -1,35 +1,35 @@
-import Button from './ui/Button.jsx'
-import Icon from './ui/Icon.jsx'
-import Reveal from './ui/Reveal.jsx'
-import { Eyebrow } from './ui/Section.jsx'
+import Button from "./ui/Button.jsx";
+import Icon from "./ui/Icon.jsx";
+import Reveal from "./ui/Reveal.jsx";
+import { Eyebrow } from "./ui/Section.jsx";
 
 const steps = [
   {
-    icon: 'signal',
-    title: 'Collect',
-    description: 'We connect to your machines, robots and systems to collect real-time data.',
+    icon: "signal",
+    title: "Collect",
+    description: "We connect to your machines, robots and systems to collect real-time data.",
   },
   {
-    icon: 'funnel',
-    title: 'Process',
-    description: 'We clean, validate and transform data into structured, reliable datasets.',
+    icon: "funnel",
+    title: "Process",
+    description: "We clean, validate and transform data into structured, reliable datasets.",
   },
   {
-    icon: 'scan',
-    title: 'Analyze',
-    description: 'We analyze data to discover patterns, anomalies and opportunities.',
+    icon: "scan",
+    title: "Analyze",
+    description: "We analyze data to discover patterns, anomalies and opportunities.",
   },
   {
-    icon: 'dashboard',
-    title: 'Deliver',
-    description: 'We deliver insights through dashboards, reports and data platforms.',
+    icon: "dashboard",
+    title: "Deliver",
+    description: "We deliver insights through dashboards, reports and data platforms.",
   },
   {
-    icon: 'refresh',
-    title: 'Improve',
-    description: 'Continuous feedback and automation to improve performance and outcomes.',
+    icon: "refresh",
+    title: "Improve",
+    description: "Continuous feedback and automation to improve performance and outcomes.",
   },
-]
+];
 
 export default function HowWeWork() {
   return (
@@ -42,8 +42,7 @@ export default function HowWeWork() {
             <Eyebrow dark>How we work</Eyebrow>
             <h2 className="mt-5 text-display-lg font-bold text-white">From raw data to real impact.</h2>
             <p className="mt-5 max-w-[460px] text-[16.5px] leading-relaxed text-slate-300">
-              A proven process that ensures your industrial data is accurate, secure and ready to
-              drive outcomes.
+              A proven process that ensures your industrial data is accurate, secure and ready to drive outcomes.
             </p>
           </Reveal>
 
@@ -88,5 +87,5 @@ export default function HowWeWork() {
         </div>
       </div>
     </section>
-  )
+  );
 }
