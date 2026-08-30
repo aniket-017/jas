@@ -17,7 +17,7 @@ export default function Contact() {
               Tell us about your business problem and we&apos;ll tell you honestly whether — and how —
               we can help.
             </p>
-            <Button href="mailto:info@jasdigitaltechnologies.com" variant="navy" icon="mail">
+            <Button href="mailto:contact@jasdigitaltechnologies.com" variant="navy" icon="mail">
               Email us
             </Button>
           </div>
