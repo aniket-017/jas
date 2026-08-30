@@ -1,49 +1,66 @@
+import Button from './ui/Button.jsx'
+import Icon from './ui/Icon.jsx'
+import Reveal from './ui/Reveal.jsx'
+import { Eyebrow } from './ui/Section.jsx'
+
 export default function Contact() {
   return (
-    <section id="contact" className="bg-canvas py-[72px] md:py-[100px]">
+    <section id="contact" className="bg-canvas py-[76px] md:py-section lg:py-section-lg">
       <div className="mx-auto max-w-site px-5 md:px-8">
-        <div className="grid border border-line bg-white shadow-card lg:grid-cols-[1.1fr_0.9fr]">
-          <div className="px-7 py-9 md:px-[52px] md:py-14">
-            <div className="mb-[18px] inline-flex items-center gap-2.5 font-mono text-xs font-medium uppercase tracking-[0.14em] text-brand-600">
-              <span className="inline-block h-0.5 w-[26px] bg-brand-500" />
-              Get in touch
-            </div>
-            <h2 className="mb-4 text-[32px] font-bold">Let&apos;s build something that works.</h2>
-            <p className="mb-[30px] max-w-[440px] text-[15.5px] text-muted">
-              Tell us about your business problem and we&apos;ll tell you honestly whether — and how — we can help.
+        <Reveal className="grid overflow-hidden border border-line bg-white shadow-card lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="px-7 py-10 md:px-14 md:py-16">
+            <Eyebrow>Get in touch</Eyebrow>
+            <h2 className="mt-5 text-display-md font-bold text-navy-900">
+              Let&apos;s build something that works.
+            </h2>
+            <p className="mb-9 mt-5 max-w-[440px] text-[16px] leading-relaxed text-muted">
+              Tell us about your business problem and we&apos;ll tell you honestly whether — and how —
+              we can help.
             </p>
-            <a
-              href="mailto:info@jasdigitaltechnologies.com"
-              className="clip-btn inline-flex items-center gap-2.5 bg-navy-900 px-[26px] py-[15px] text-[14.5px] font-semibold text-white transition duration-200 hover:-translate-y-0.5 hover:bg-brand-600"
-            >
+            <Button href="mailto:info@jasdigitaltechnologies.com" variant="navy" icon="mail">
               Email us
-            </a>
+            </Button>
           </div>
 
-          <div className="flex flex-col justify-center gap-[26px] bg-navy-900 px-7 py-9 md:px-12 md:py-14">
-            <div>
-              <div className="mb-2.5 font-mono text-xs font-medium uppercase tracking-[0.14em] text-white/42">
-                Studio Address
+          <div className="relative flex flex-col justify-center gap-8 overflow-hidden bg-navy-900 px-7 py-10 md:px-12 md:py-16">
+            <div className="grid-lines pointer-events-none absolute inset-0 opacity-60" aria-hidden="true" />
+
+            <div className="relative flex gap-4">
+              <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center border border-white/15 bg-white/5 text-brand-500">
+                <Icon name="pin" className="h-[18px] w-[18px]" />
+              </span>
+              <div>
+                <div className="mb-2 font-mono text-[11px] font-medium uppercase tracking-[0.16em] text-slate-400">
+                  Studio Address
+                </div>
+                <p className="text-[15px] font-medium leading-[1.6] text-white">
+                  PL-546, Sector 28, PCNTDA, Nigdi, Pradhikaran, P.C.N.T., Nigdi, Pune City,
+                  Pune – 411044, Maharashtra, India
+                </p>
               </div>
-              <p className="text-[15px] font-medium leading-[1.55] text-white">
-                PL-546, Sector 28, PCNTDA, Nigdi, Pradhikaran, P.C.N.T., Nigdi, Pune City, Pune – 411044, Maharashtra, India
-              </p>
             </div>
-            <div>
-              <div className="mb-2.5 font-mono text-xs font-medium uppercase tracking-[0.14em] text-white/42">
-                Website
+
+            <div className="relative flex gap-4">
+              <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center border border-white/15 bg-white/5 text-brand-500">
+                <Icon name="globe" className="h-[18px] w-[18px]" />
+              </span>
+              <div>
+                <div className="mb-2 font-mono text-[11px] font-medium uppercase tracking-[0.16em] text-slate-400">
+                  Website
+                </div>
+                <a
+                  href="https://jasdigitaltechnologies.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-[15px] font-medium text-white transition-colors duration-200 hover:text-brand-500"
+                >
+                  jasdigitaltechnologies.com
+                  <Icon name="arrowUpRight" className="h-3.5 w-3.5" />
+                </a>
               </div>
-              <a
-                href="https://jasdigitaltechnologies.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[15px] font-medium text-white hover:text-brand-500"
-              >
-                jasdigitaltechnologies.com
-              </a>
             </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   )

@@ -1,60 +1,109 @@
+import heroImage from '../assets/hero_section.png'
+import Button from './ui/Button.jsx'
+import Icon from './ui/Icon.jsx'
+import Reveal from './ui/Reveal.jsx'
+import { Eyebrow } from './ui/Section.jsx'
+
+// Restates the service pillars below the fold-line — no invented metrics.
+const pillars = ['Ingest', 'Process', 'Integrate', 'Analyze', 'Govern']
+
 export default function Hero() {
   return (
-    <section className="hero-bg relative overflow-hidden pb-[72px] pt-14 md:pb-[110px] md:pt-24">
-      <div className="mx-auto grid max-w-site items-center gap-14 px-5 md:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
-        <div className="order-2 lg:order-1">
-          <div className="mb-[22px] inline-flex items-center gap-2.5 font-mono text-xs font-medium uppercase tracking-[0.14em] text-brand-600">
-            <span className="inline-block h-0.5 w-[26px] bg-brand-500" />
-            Pune, India — Digital Product Studio
-          </div>
-          <h1 className="mb-6 text-[34px] font-bold md:text-[clamp(38px,4.6vw,60px)]">
-            We turn business problems into <span className="text-brand-600">working software.</span>
-          </h1>
-          <p className="mb-9 max-w-[520px] text-[17.5px] text-muted">
-            JAS Digital Technologies designs and builds the web platforms, mobile apps, AI workflows and cloud systems that let growing businesses run on modern infrastructure instead of manual processes.
-          </p>
-          <div className="mb-12 flex flex-wrap gap-4">
-            <a
-              href="#solutions"
-              className="clip-btn inline-flex items-center gap-2.5 bg-navy-900 px-[26px] py-[15px] text-[14.5px] font-semibold text-white transition duration-200 hover:-translate-y-0.5 hover:bg-brand-600"
-            >
-              Explore solutions
-            </a>
-            <a
-              href="#products"
-              className="clip-btn inline-flex items-center gap-2.5 border-[1.5px] border-navy-900 bg-transparent px-[26px] py-[15px] text-[14.5px] font-semibold text-navy-900 transition duration-200 hover:-translate-y-0.5 hover:border-brand-600 hover:text-brand-600"
-            >
-              Our products
-            </a>
-          </div>
-          <div className="flex flex-wrap gap-5 border-t border-line pt-8 md:gap-9">
-            {[
-              'End-to-end delivery, in-house',
-              'Modern, scalable tech stacks',
-              'Built by engineers, not templates',
-            ].map((item) => (
-              <div key={item} className="flex items-center gap-2.5 text-[13.5px] font-medium text-muted">
-                <span className="h-[7px] w-[7px] shrink-0 bg-brand-500" />
-                {item}
-              </div>
-            ))}
-          </div>
-        </div>
+    <section className="surface-dark pb-16 pt-14 md:pb-20 md:pt-24 lg:pb-24">
+      <div className="grid-lines mask-fade pointer-events-none absolute inset-0" aria-hidden="true" />
 
-        <div className="relative order-1 flex h-80 items-center justify-center lg:order-2 lg:h-[440px]">
-          <div className="clip-mark relative h-full w-full bg-navy-900 shadow-panel">
-            <div className="grid-lines pointer-events-none absolute inset-0" />
-            <div className="absolute left-[14%] top-[16%] h-[34px] w-[34px] bg-brand-500" />
-            <div className="absolute right-[16%] bottom-[20%] h-0 w-0 border-x-[42px] border-b-[68px] border-x-transparent border-b-brand-500" />
-            <div className="absolute right-[20%] top-[24%] h-0 w-0 border-x-[26px] border-b-[42px] border-x-transparent border-b-white/14" />
-            <div className="absolute bottom-[16%] left-[20%] h-[18px] w-[18px] bg-white/16" />
-            <div className="absolute left-[44%] top-[44%] h-[120px] w-[120px] rounded-full border-[1.5px] border-white/18" />
-            <div className="absolute bottom-6 left-6 right-6 flex justify-between font-mono text-[12.5px] font-medium uppercase tracking-[0.14em] text-white/72">
-              <span>SYS.01</span>
-              <span>JAS/DT</span>
-            </div>
+      <div className="relative z-[2] mx-auto max-w-site px-5 md:px-8">
+        <div className="grid items-center gap-12 lg:grid-cols-[1fr_1.05fr] lg:gap-16">
+          <div>
+            <Reveal>
+              <Eyebrow dark>We process data. You drive innovation.</Eyebrow>
+            </Reveal>
+
+            <Reveal delay={80}>
+              <h1 className="mt-6 text-display-xl font-bold text-white">
+                Turning industrial data into business{' '}
+                <span className="relative text-brand-500">
+                  intelligence.
+                  <span
+                    className="absolute -bottom-1 left-0 h-[3px] w-full bg-gradient-to-r from-brand-500 to-transparent"
+                    aria-hidden="true"
+                  />
+                </span>
+              </h1>
+            </Reveal>
+
+            <Reveal delay={160}>
+              <p className="mt-7 max-w-[520px] text-[17px] leading-[1.65] text-slate-300">
+                We collect, process and transform data generated by machines, robots and industrial
+                systems into clean, reliable insights that power better decisions.
+              </p>
+            </Reveal>
+
+            <Reveal delay={240} className="mt-10 flex flex-wrap gap-4">
+              <Button href="#solutions" variant="primary">
+                Explore our solutions
+              </Button>
+              <Button href="#contact" variant="outlineDark" icon={null}>
+                Talk to our data experts
+              </Button>
+            </Reveal>
+
+            <Reveal delay={320} className="mt-12 border-t border-white/10 pt-7">
+              <div className="mb-4 font-mono text-[11px] uppercase tracking-[0.18em] text-slate-500">
+                The full data lifecycle
+              </div>
+              <ul className="flex flex-wrap items-center gap-x-3 gap-y-2.5">
+                {pillars.map((pillar, index) => (
+                  <li key={pillar} className="flex items-center gap-3">
+                    <span className="text-[13.5px] font-semibold text-slate-200">{pillar}</span>
+                    {index < pillars.length - 1 && (
+                      <span className="h-1 w-1 rounded-full bg-brand-500/70" aria-hidden="true" />
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
           </div>
+
+          <Reveal delay={120} className="relative">
+            {/* Ambient glow anchoring the product visual */}
+            <div
+              className="pointer-events-none absolute left-1/2 top-1/2 h-[78%] w-[86%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-data-500/20 blur-[90px]"
+              aria-hidden="true"
+            />
+            <div className="relative flex h-[300px] items-center justify-center sm:h-[400px] lg:h-[560px]">
+              <img
+                src={heroImage}
+                alt="Industrial dashboard showing throughput, quality score and event volume alongside a robotic assembly cell"
+                className="h-full w-full object-contain drop-shadow-[0_24px_48px_rgba(0,0,0,0.45)]"
+                loading="eager"
+                fetchPriority="high"
+              />
+            </div>
+
+            {/* Live-status chip — reinforces the real-time positioning */}
+            <div className="absolute bottom-2 left-2 hidden items-center gap-2.5 border border-white/12 bg-navy-950/80 px-4 py-2.5 backdrop-blur-sm sm:inline-flex">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-pulse-dot rounded-full bg-brand-500" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-500" />
+              </span>
+              <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-slate-300">
+                Real-time pipelines
+              </span>
+            </div>
+          </Reveal>
         </div>
+      </div>
+
+      {/* Scroll affordance */}
+      <div className="relative z-[2] mx-auto mt-12 hidden max-w-site px-5 md:px-8 lg:block">
+        <a
+          href="#what-we-do"
+          className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.18em] text-slate-400 transition-colors duration-200 hover:text-brand-500"
+        >
+          <Icon name="arrowRight" className="h-4 w-4 rotate-90" />
+          Scroll to explore
+        </a>
       </div>
     </section>
   )
