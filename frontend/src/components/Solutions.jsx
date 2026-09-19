@@ -1,37 +1,41 @@
+import Icon from './ui/Icon.jsx'
+import Reveal from './ui/Reveal.jsx'
+import { Section, SectionHead } from './ui/Section.jsx'
+
 const solutions = [
   {
     num: '01',
-    icon: '💻',
+    icon: 'code',
     title: 'Software Development',
     body: 'Custom web applications, enterprise software, dashboards, and business platforms.',
   },
   {
     num: '02',
-    icon: '📱',
+    icon: 'mobile',
     title: 'Mobile App Development',
     body: 'iOS and Android applications designed for real-world business needs.',
   },
   {
     num: '03',
-    icon: '🤖',
+    icon: 'chip',
     title: 'AI & Automation',
     body: 'AI-powered applications, intelligent workflows, chatbots, and business automation.',
   },
   {
     num: '04',
-    icon: '☁️',
+    icon: 'server',
     title: 'Cloud & DevOps',
     body: 'Cloud infrastructure, deployment, hosting, APIs, monitoring, and scalable systems.',
   },
   {
     num: '05',
-    icon: '🔗',
+    icon: 'transform',
     title: 'Digital Transformation',
     body: 'Helping businesses replace manual processes with modern digital solutions.',
   },
   {
     num: '06',
-    icon: '🛠️',
+    icon: 'wrench',
     title: 'Custom Technology Solutions',
     body: 'End-to-end technology solutions tailored to specific business requirements.',
   },
@@ -39,38 +43,38 @@ const solutions = [
 
 export default function Solutions() {
   return (
-    <section id="solutions" className="border-y border-line bg-canvas py-[72px] md:py-[100px]">
-      <div className="mx-auto max-w-site px-5 md:px-8">
-        <div className="mb-14 max-w-[640px]">
-          <div className="mb-[22px] inline-flex items-center gap-2.5 font-mono text-xs font-medium uppercase tracking-[0.14em] text-brand-600">
-            <span className="inline-block h-0.5 w-[26px] bg-brand-500" />
-            What we do
-          </div>
-          <h2 className="text-[clamp(30px,3.4vw,42px)] font-bold">Solutions</h2>
-          <p className="mt-3.5 text-base text-muted">
-            Six practice areas, one team. We pick the right stack for the problem rather than forcing your business into ours.
-          </p>
-        </div>
+    <Section id="solutions" tone="light" className="border-y border-line">
+      <SectionHead
+        eyebrow="Capabilities"
+        title="Solutions"
+        body="Six practice areas, one team. We pick the right stack for the problem rather than forcing your business into ours."
+      />
 
-        <div className="grid grid-cols-1 gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
-          {solutions.map((item) => (
-            <article
-              key={item.num}
-              className="group relative bg-white px-[34px] pb-[34px] pt-[38px] transition-colors duration-200 hover:bg-canvas-alt"
-            >
-              <span className="absolute left-0 top-0 h-0 w-0 border-b-[26px] border-l-[26px] border-b-brand-100 border-l-transparent transition-colors duration-200 group-hover:border-b-brand-500" />
-              <span className="absolute right-[34px] top-9 font-mono text-xs text-muted-light">
-                {item.num}
-              </span>
-              <div className="mb-[22px] flex h-[52px] w-[52px] items-center justify-center bg-canvas-alt text-[26px]">
-                {item.icon}
-              </div>
-              <h3 className="mb-2.5 text-[19px] font-semibold">{item.title}</h3>
-              <p className="text-[14.5px] text-muted">{item.body}</p>
-            </article>
-          ))}
-        </div>
+      <div className="grid grid-cols-1 gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
+        {solutions.map((item, index) => (
+          <Reveal
+            key={item.num}
+            delay={index * 70}
+            className="group relative bg-white p-8 transition-colors duration-300 ease-out hover:bg-canvas-alt md:p-10"
+          >
+            {/* Corner notch reacts to hover */}
+            <span
+              className="absolute left-0 top-0 h-0 w-0 border-b-[26px] border-l-[26px] border-b-brand-100 border-l-transparent transition-colors duration-300 ease-out group-hover:border-b-brand-500"
+              aria-hidden="true"
+            />
+            <span className="absolute right-8 top-8 font-mono text-xs text-muted-light transition-colors duration-300 group-hover:text-brand-500 md:right-10 md:top-10">
+              {item.num}
+            </span>
+
+            <div className="mb-7 flex h-14 w-14 items-center justify-center border border-line bg-canvas-alt text-navy-900 transition-all duration-300 ease-out group-hover:border-brand-500/40 group-hover:bg-brand-50 group-hover:text-brand-600">
+              <Icon name={item.icon} className="h-[26px] w-[26px]" />
+            </div>
+
+            <h3 className="mb-3 max-w-[85%] text-[19px] font-semibold text-navy-900">{item.title}</h3>
+            <p className="text-[15px] leading-relaxed text-muted">{item.body}</p>
+          </Reveal>
+        ))}
       </div>
-    </section>
+    </Section>
   )
 }
