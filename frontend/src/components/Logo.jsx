@@ -1,8 +1,10 @@
+import logo from '../assets/logo.jpeg'
+
 export default function Logo({ compact = false }) {
   return (
     <span className="flex items-center gap-3">
-      <span className="relative flex h-8 w-8 shrink-0 items-center justify-center bg-navy-900">
-        <span className="h-0 w-0 border-x-[7px] border-b-[12px] border-x-transparent border-b-brand-500" />
+      <span className={`shrink-0 overflow-hidden bg-white ${compact ? 'h-8 w-8' : 'h-10 w-10'}`}>
+        <img src={logo} alt="JAS Digital logo" className="h-full w-full scale-[1.22] object-cover" />
       </span>
       <span
         className={`font-display font-bold leading-tight text-navy-900 ${

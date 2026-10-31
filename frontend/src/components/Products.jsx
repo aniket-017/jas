@@ -25,10 +25,12 @@ export default function Products() {
               A B2B marketplace connecting businesses with industrial surplus inventory — turning idle stock into working capital, and surplus into sourcing opportunity.
             </p>
             <a
-              href="#contact"
+              href="https://surplustovalue.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 border-b-[1.5px] border-brand-500 pb-[3px] text-[14.5px] font-semibold text-white hover:text-brand-500"
             >
-              Learn more →
+              Visit surplustovalue.com →
             </a>
             <div className="mt-8 flex flex-wrap gap-7 border-t border-white/12 pt-6">
               <div>
