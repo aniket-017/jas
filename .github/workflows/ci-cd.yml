@@ -61,8 +61,9 @@ jobs:
            if [ -d ~/jas ]; then
              echo "📂 Pulling latest changes from Git"
              cd ~/jas
-             git reset --hard
-             git pull origin main
+             git fetch origin main
+             git checkout main
+             git reset --hard origin/main
            else
              echo "📂 Cloning repository"
              git clone https://github.com/aniket-017/jas.git ~/jas 
